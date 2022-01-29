@@ -57,6 +57,15 @@ def Take_Command():
     except Exception as e:
         print(e)
         print("Please repeat that again.........")
-        return query
+    return query
     
-Take_Command()
+if __name__ == "__main__":
+    wish_me()
+
+    while True:
+        query = Take_Command().lower()
+
+        if 'time' in query:
+            time_()
+        if 'date' in query:
+            date_()
